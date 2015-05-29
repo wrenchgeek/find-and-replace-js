@@ -1,6 +1,6 @@
-var findAndReplace = function(originalString, foundWord, replacementWord) {
-  var outputString = originalString.replace(foundWord, replacementWord);
-  return outputString;
+var findAndReplace = function(originalString, foundString, replacementString) {
+  var newString = originalString.replace(foundString, replacementString);
+  return newString;
 }
 
 // NOTE: So... the above code works just fine. It turns out that a find and
@@ -24,12 +24,20 @@ var insert = function(originalString, insertedString, position) {
   return newString;
 }
 
+var findAndReplaceHardMode = function(originalString, foundString, replacementString) {
+  var position = originalString.search(foundString);
+  var cutString = cut(originalString, foundString);
+  var newString = insert(cutString, replacementString, position);
+  return newString;
+}
+
+
 $(document).ready(function() {
   $("form#phrases").submit(function(event) {
     var originalString = ($("input#original_string").val());
-    var foundWord = ($("input#found_word").val());
-    var replacementWord = ($("input#replacement_word").val());
-    var outputString = findAndReplace(originalString, foundWord, replacementWord);
+    var foundString = ($("input#found_string").val());
+    var replacementString = ($("input#replacement_string").val());
+    var outputString = findAndReplaceHardMode(originalString, foundString, replacementString);
 
     $(".output").text(outputString);
 

@@ -25,3 +25,10 @@ describe('findAndReplaceHardMode', function() {
     expect(findAndReplaceHardMode(testString, "mother", "father")).to.eql("my father and I were sitting on the porch.");
   });
 });
+
+describe('findAndReplaceNightmareMode', function() {
+  it('will find and replace every instance of a substring from a parent string', function() {
+    var testString = "hey baby baby";
+    expect(findAndReplaceNightmareMode(testString, "baby", "honey")).to.equal("hey honey honey");
+  });
+});
