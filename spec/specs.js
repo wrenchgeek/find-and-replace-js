@@ -5,11 +5,9 @@ describe('findAndReplace', function() {
   });
 });
 
-describe('findAndReplaceHardMode', function() {
-  describe('cut', function() {
-    it('will search through a string and cut out a substring', function() {
-      var testString = "my mother and I were sitting on the porch.";
-      expect(cut(testString, "mother")).to.equal("my  and I were sitting on the porch.");
-    });
+describe('cut', function() {
+  it('will search through a string and cut out a substring', function() {
+    var testString = "my mother and I were sitting on the porch.";
+    expect(cut(testString, "mother")).to.equal("my  and I were sitting on the porch.");
   });
 });
