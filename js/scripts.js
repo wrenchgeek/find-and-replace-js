@@ -9,15 +9,13 @@ var findAndReplace = function(originalString, foundWord, replacementWord) {
 //       same thing. Seeing as I have 5+ more hours to kill I think I'll do
 //       just that :)
 
-var findAndReplaceHardMode = function(originalString, foundWord, replacementWord) {
-}
+
 
 var cut = function(originalString, cutString) {
   var placeInString = originalString.search(cutString);
   var beginingOfString = originalString.slice(0, placeInString);
   var endOfString = originalString.slice(placeInString + cutString.length, originalString.length);
   var newString = beginingOfString.concat(endOfString);
-// debugger;
   return newString;
 }
 
