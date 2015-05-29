@@ -31,6 +31,37 @@ var findAndReplaceHardMode = function(originalString, foundString, replacementSt
   return newString;
 }
 
+// ============WORK IN PROGRESS==============================
+
+// var contains = function(arrayName, member) {
+//   for (var index = 0; i < arrayName.length; index +=) {
+//     if(arrayName[index] === member) {
+//       return true;
+//     } else{
+//       return false;
+//     }
+//   }
+// }
+
+// function contains(a, obj) {
+//     for (var i = 0; i < a.length; i++) {
+//         if (a[i] === obj) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+//
+//
+// var findAndReplaceNightmareMode = function(originalString, foundString, replacementString) {
+//   var originalStringArray = originalString.split(" ");
+//   while(contains(originalStringArray, foundString)) {
+//     newString = findAndReplace(originalString, foundString, replacementString);
+//     originalStringArray = newString.split(" ");
+//   }
+// }
+
+// ============/WORK IN PROGRESS======================================================================
 
 $(document).ready(function() {
   $("form#phrases").submit(function(event) {
