@@ -12,13 +12,17 @@ var findAndReplace = function(originalString, foundWord, replacementWord) {
 
 
 var cut = function(originalString, cutString) {
-  var placeInString = originalString.search(cutString);
-  var beginingOfString = originalString.slice(0, placeInString);
-  var endOfString = originalString.slice(placeInString + cutString.length, originalString.length);
+  var position = originalString.search(cutString);
+  var beginingOfString = originalString.slice(0, position);
+  var endOfString = originalString.slice(position + cutString.length, originalString.length);
   var newString = beginingOfString.concat(endOfString);
   return newString;
 }
 
+var insert = function(originalString, insertedString, position) {
+  var newString = [originalString.slice(0, position), insertedString, originalString.slice(position, originalString.length)].join('');
+  return newString;
+}
 
 $(document).ready(function() {
   $("form#phrases").submit(function(event) {
